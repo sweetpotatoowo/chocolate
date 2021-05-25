@@ -1,0 +1,191 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* header */
+
+/* 帳戶 */
+.top-nav {
+    /* float: right; */
+    background-color: rgb(183, 135, 77);
+    position: fixed;
+    /* padding: 20px; */
+    z-index: 999999;
+    right: 0;
+    left: 0;
+}
+
+.top-nav:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.nav-left{
+    float: left;
+    /* width: 270px; */
+    /* background-color: greenyellow; */
+}
+.nav-left>a{
+    width: 270px;
+}
+.nav-left>a>img{
+    max-width: 100%;
+}
+.nav-right{
+    /* float: left; */
+    padding: 45px;
+}
+.nav-right>ul{
+    list-style: none;
+}
+.nav-right>ul>li{
+    margin-left: 50px;
+    float: right;
+}
+.nav-right>ul>li>a{
+    text-decoration: none;
+    position: relative;
+}
+/* 導覽列 */
+
+nav ul{
+    background-color:burlywood;
+    list-style: none;
+    /* margin: 0; */
+    padding-top: 120px;
+    padding-bottom: 10px;
+    /* height: 250px;
+    line-height: 250px; */
+    
+}
+
+nav a{
+    text-decoration: none;
+    font-size: 1.2rem;
+    display: block;
+    padding: 10px;
+}
+nav a:hover{
+    color:blanchedalmond;
+    background-color:darksalmon;
+}
+.flex-nav{
+    display: flex;
+    justify-content: center;
+}
+/* 輪播 */
+/* 輪播容器 */
+.slideshow-container{
+    /* max-width: 1000px; */
+   overflow: hidden;
+   position: relative;
+}
+/* 左右兩邊按鈕 */
+.prev, .next{
+    cursor:pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+}
+/* 右邊按鈕 */
+.next{
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+/* 按鈕點擊 */
+.prev:hover, .next:hover{
+    background-color: rgba(0,0,0,0.8);
+}
+/* 我的輪播圖 */
+.mySlides{
+    width: 100%;
+    display: none;
+}
+.mySlides>img{
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+/* 輪播圖的點擊按鈕 */
+.dot-container{
+    text-align: center;
+}
+.dot{
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    background-color: #bbb;
+    margin: 0 2px;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+.active, .dot:hover{
+    background-color: #717171;
+}
+/* fading animation */
+.fade{
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+@keyframes fade{
+    from {opacity:0.4;}
+    to{opacity: 1;}
+}
+/* news */
+.news-title{
+    font-size: 50px;
+    font-weight: 500;
+    padding: 20px;
+}
+.news-box{
+    display: flex;
+    width: 80%;
+    /* background-color: aqua; */
+    margin: 40px auto;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #717171;
+}
+.news-img{
+    width: 25%;
+}
+.news-img>img{
+    max-width: 100%;
+}
+.news-txt{
+    width: 75%; 
+    padding-left: 50px;
+    /* border-bottom: 2px solid gray; */
+}
+.news-sm-title>h3{
+    font-weight: bold;
+    font-size: 36px;
+}
+.news-content{
+    line-height: 2;
+    font-size: 20px;
+    color: #8c8c8c;
+}
+.news-more{
+    float: right;
+    margin-top: 50px;
+    margin-right: 40px;
+}
+.clearfix{
+    display: block;
+    content: "";
+    clear: both;
+}
+/* footer */
+footer{
+    text-align:center;
+    background-color: rgb(183, 135, 77);
+}

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/news.css">
+</head>
+
+<body>
+    <header>
+        <!-- 帳號的註冊與登入 -->
+        <div class="top-nav">
+            <div class="nav-left">
+                <a href="#">
+                    <img src="img/CocoA(金色字體).png" alt="">
+                </a>
+            </div>
+            <div class="nav-right">
+                <ul>
+                    <li><a href="#">登入</a></li>
+                    <li><a href="#">註冊</a></li>
+                    <li><a href="#">購物車</a></li>
+                </ul>
+            </div>
+        </div>
+        <nav>
+            <ul class="flex-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="product.html">Product</a></li>
+                <li><a href="About.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- 輪播圖 -->
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <img src="img/slide1.jpg" alt="">
+        </div>
+        <div class="mySlides fade">
+            <img src="img/slide2.jpg" alt="">
+        </div>
+        <div class="mySlides fade">
+            <img src="img/slide3.jpg" alt="">
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <div class="dot-container">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+    <div class="news">
+        <div class="news-title">
+            <h2>News</h2>    
+        </div>
+        <hr>
+        <div class="news-box">
+            <div class="news-img">
+                <img src="img/News-1.jpg" alt="">
+            </div>
+            <div class="news-txt">
+                <div class="news-sm-title">
+                    <h3>Lorem</h3>
+                </div>
+                <div class="news-content">
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. <br>
+                        It is a long established fact that a reader will be distracted by the readable content of a page
+                        when looking at its layout. <br>
+                        Contrary to popular belief, Lorem Ipsum is not simply random text. <br>
+                        The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.
+                    </p>
+                </div>
+                <div class="news-more clearfix">
+                    <p>查看更多</p>
+                </div>
+            </div>
+        </div>
+        <div class="news-box">
+            <div class="news-img">
+                <img src="img/News-2.jpg" alt="">
+            </div>
+            <div class="news-txt">
+                <div class="news-sm-title">
+                    <h3>Lorem</h3>
+                </div>
+                <div class="news-content">
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. <br>
+                        It is a long established fact that a reader will be distracted by the readable content of a page
+                        when looking at its layout. <br>
+                        Contrary to popular belief, Lorem Ipsum is not simply random text. <br>
+                        The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.
+                    </p>
+                </div>
+                <div class="news-more clearfix">
+                    <p>查看更多</p>
+                </div>
+            </div>
+        </div>
+        <div class="news-box">
+            <div class="news-img">
+                <img src="img/News-3.jpg" alt="">
+            </div>
+            <div class="news-txt">
+                <div class="news-sm-title">
+                    <h3>Lorem</h3>
+                </div>
+                <div class="news-content">
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. <br>
+                        It is a long established fact that a reader will be distracted by the readable content of a page
+                        when looking at its layout. <br>
+                        Contrary to popular belief, Lorem Ipsum is not simply random text. <br>
+                        The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.
+                    </p>
+                </div>
+                <div class="news-more clearfix">
+                    <p>查看更多</p>
+                </div>
+            </div>
+        </div>
+        <div class="news-box">
+            <div class="news-img">
+                <img src="img/News-4.jpg" alt="">
+            </div>
+            <div class="news-txt">
+                <div class="news-sm-title">
+                    <h3>Lorem</h3>
+                </div>
+                <div class="news-content">
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. <br>
+                        It is a long established fact that a reader will be distracted by the readable content of a page
+                        when looking at its layout. <br>
+                        Contrary to popular belief, Lorem Ipsum is not simply random text. <br>
+                        The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.
+                    </p>
+                </div>
+                <div class="news-more clearfix">
+                    <p>查看更多</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <h3>copyright © chocolate all rights reserved</h3>
+    </footer>
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+    </script>
+</body>
+
+</html>
